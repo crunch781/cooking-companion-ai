@@ -6,30 +6,15 @@ const cuisines = [
   { id: "fr", name: "Française" },
   { id: "it", name: "Italienne" },
   { id: "jp", name: "Japonaise" },
-];
-
-const sampleRecipes = [
-  {
-    id: "1",
-    title: "Ratatouille Provençale",
-    cuisine: "Française",
-    time: "45 min",
-    image: "/placeholder.svg",
-  },
-  {
-    id: "2",
-    title: "Pasta Carbonara",
-    cuisine: "Italienne",
-    time: "30 min",
-    image: "/placeholder.svg",
-  },
-  {
-    id: "3",
-    title: "Sushi Rolls",
-    cuisine: "Japonaise",
-    time: "60 min",
-    image: "/placeholder.svg",
-  },
+  { id: "th", name: "Thaïlandaise" },
+  { id: "in", name: "Indienne" },
+  { id: "mx", name: "Mexicaine" },
+  { id: "lb", name: "Libanaise" },
+  { id: "gr", name: "Grecque" },
+  { id: "vn", name: "Vietnamienne" },
+  { id: "ma", name: "Marocaine" },
+  { id: "kr", name: "Coréenne" },
+  { id: "es", name: "Espagnole" },
 ];
 
 const Recettes = () => {
@@ -52,7 +37,7 @@ const Recettes = () => {
           Découvrez des recettes de différentes cuisines du monde
         </p>
 
-        <div className="flex gap-4 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
           {cuisines.map(cuisine => (
             <button
               key={cuisine.id}
@@ -68,16 +53,11 @@ const Recettes = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {sampleRecipes.map(recipe => (
-            <RecipeCard
-              key={recipe.id}
-              {...recipe}
-              isFavorite={favorites.includes(recipe.id)}
-              onFavoriteClick={() => toggleFavorite(recipe.id)}
-            />
-          ))}
-        </div>
+        {selectedCuisine && (
+          <div className="text-center text-muted-foreground py-12">
+            Sélectionnez vos préférences pour voir des suggestions de recettes
+          </div>
+        )}
       </div>
     </PageContainer>
   );
