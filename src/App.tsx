@@ -5,6 +5,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./components/layout/Navigation";
 import Index from "./pages/Index";
+import Frigo from "./pages/Frigo";
+import Recettes from "./pages/Recettes";
+import Historique from "./pages/Historique";
+import Listes from "./pages/Listes";
 
 const queryClient = new QueryClient();
 
@@ -17,10 +21,10 @@ const App = () => (
         <Navigation />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/frigo" element={<div>Frigo Page (Coming Soon)</div>} />
-          <Route path="/recettes" element={<div>Recettes Page (Coming Soon)</div>} />
-          <Route path="/historique" element={<div>Historique Page (Coming Soon)</div>} />
-          <Route path="/listes" element={<div>Listes Page (Coming Soon)</div>} />
+          <Route path="/frigo" element={<Frigo />} />
+          <Route path="/recettes" element={<Recettes />} />
+          <Route path="/historique" element={<Historique />} />
+          <Route path="/listes" element={<Listes />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
