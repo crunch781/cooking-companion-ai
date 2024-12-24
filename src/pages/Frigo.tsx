@@ -3,21 +3,21 @@ import PageContainer from "@/components/layout/PageContainer";
 import IngredientList from "@/components/frigo/IngredientList";
 
 const frigoIngredients = [
-  { id: "1", name: "Lait", category: "frigo" },
-  { id: "2", name: "Œufs", category: "frigo" },
-  { id: "3", name: "Fromage", category: "frigo" },
+  { id: "1", name: "Lait", category: "frigo" as const },
+  { id: "2", name: "Œufs", category: "frigo" as const },
+  { id: "3", name: "Fromage", category: "frigo" as const },
 ];
 
 const placardIngredients = [
-  { id: "4", name: "Farine", category: "placard" },
-  { id: "5", name: "Sucre", category: "placard" },
-  { id: "6", name: "Pâtes", category: "placard" },
+  { id: "4", name: "Farine", category: "placard" as const },
+  { id: "5", name: "Sucre", category: "placard" as const },
+  { id: "6", name: "Pâtes", category: "placard" as const },
 ];
 
 const congelateurIngredients = [
-  { id: "7", name: "Légumes surgelés", category: "congelateur" },
-  { id: "8", name: "Viande congelée", category: "congelateur" },
-  { id: "9", name: "Glace", category: "congelateur" },
+  { id: "7", name: "Légumes surgelés", category: "congelateur" as const },
+  { id: "8", name: "Viande congelée", category: "congelateur" as const },
+  { id: "9", name: "Glace", category: "congelateur" as const },
 ];
 
 const Frigo = () => {
