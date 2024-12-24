@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Refrigerator, Globe, History, ListChecks } from "lucide-react";
 import PageContainer from "@/components/layout/PageContainer";
+import { cn } from "@/lib/utils";
 
 const features = [
   {
